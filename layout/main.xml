@@ -1,0 +1,8 @@
+<body> <!-- an overall plugin container panel -->
+    <pad> <!-- adds whitespace padding -->
+        <hc> <!-- horizontal container -->
+            <label id="counter-label" />
+            <button id="increment-button" text="+1" style="mini" />
+        </hc>
+    </pad>
+</body>

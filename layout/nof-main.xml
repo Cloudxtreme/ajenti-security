@@ -1,0 +1,15 @@
+<body>
+    <pad>
+        <vc>
+            <formline text="SELINUX">
+                <textbox id="status" />
+            </formline>
+            <formline text="Style">
+                <dropdown id="style" />
+            </formline>
+            <formline>
+                <button icon="ok" id="show" text="Change" warning="{The config file has been changed.Reboot the system?}"/>
+            </formline>
+        </vc>
+    </pad>
+</body>
