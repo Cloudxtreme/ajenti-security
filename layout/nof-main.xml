@@ -11,24 +11,35 @@
                 <button icon="ok" id="show" text="Change" warning="{The config file has been changed.Reboot the system?}"/>
             </formline>
         </vc>
+    </pad>
+    <pad>
         <vc id="bindroot">
-            <box>
-                <bind:collection bind="data">
-                    <dt bind="__items" width="300">
+                <bind:collection bind="data" id="modules">
+                    <dt bind="__items" width="400">
                         <dtr header="True">
-                            <dth text="module" />
-                            <dth text="version" />
+                            <dth text="module-name" width="250" />
+                            <dth text="version" width="150" />
+                            <dth text="action" width="100" />
                         </dtr>
                     </dt>
 
                     <bind:template>
                         <dtr>
-                            <dtd><textbox bind="module" /></dtd>
-                            <dtd><textbox bind="version" /></dtd>
+                            <dtd><label bind="module" /></dtd>
+                            <dtd><label bind="version" /></dtd>
+                            <dtd>
+                                <hc>
+                                    <tooltip text="{Start}">
+                                        <button id="start" icon="play" style="mini"  visible="False" />
+                                    </tooltip>
+                                    <tooltip text="{Stop}">
+                                        <button id="stop" icon="stop" style="mini" visible="False" />
+                                    </tooltip>
+                                </hc>
+                            </dtd>
                         </dtr>
                     </bind:template>
                 </bind:collection>
-            </box>
         </vc>
     </pad>
 </body>
